@@ -1,0 +1,5 @@
+.recovery/
+__pycache__/
+AUDIT.md
+Thumbs.db
+.DS_Store
