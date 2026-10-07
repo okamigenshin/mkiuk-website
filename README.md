@@ -1,6 +1,6 @@
 # Martin Kaye Interiors website
 
-This is the static Martin Kaye Interiors website, prepared for GitHub Pages. To preview it locally, run `python -m http.server 8765` in this folder and visit `http://localhost:8765/`.
+This is the static Martin Kaye Interiors website, published at https://okamigenshin.github.io/mkiuk-website/. To preview it locally, run `python -m http.server 8765` in this folder and visit `http://localhost:8765/`.
 
 ## Source and limits
 
