@@ -3,3 +3,14 @@ __pycache__/
 AUDIT.md
 Thumbs.db
 .DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.sqlite
+*.sqlite3
+*.db
+*.sql
+*.bak

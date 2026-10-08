@@ -1,6 +1,6 @@
 # Martin Kaye Interiors website
 
-This is the static Martin Kaye Interiors website, published at https://okamigenshin.github.io/mkiuk-website/. To preview it locally, run `python -m http.server 8765` in this folder and visit `http://localhost:8765/`.
+This is the static Martin Kaye Interiors website, published at https://mkiuk.com/. To preview it locally, run `python -m http.server 8765` in this folder and visit `http://localhost:8765/`.
 
 ## Source and limits
 
@@ -13,6 +13,8 @@ This is the static Martin Kaye Interiors website, published at https://okamigens
 
 ## Hosting
 
-GitHub Pages publishes the `main` branch from the repository root. The site uses relative paths, so it works at the repository Pages URL and at a future custom domain. `.nojekyll` is included. The custom domain is not configured yet.
+GitHub Pages publishes an explicitly packaged website artifact from `main`, after the Site safety workflow passes. Pull requests run the checks with read-only permissions and cannot deploy. Only the deployment job receives Pages and OIDC write permissions. The custom domain is `mkiuk.com`, with HTTPS enforced. `.nojekyll` is included.
+
+Run `python .github/scripts/check_site.py` before submitting changes. See [SECURITY.md](SECURITY.md) for the security controls and remaining hosting limits.
 
 The `.recovery` folder and `AUDIT.md` are local working records and are excluded from Git.
