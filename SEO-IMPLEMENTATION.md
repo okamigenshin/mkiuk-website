@@ -31,17 +31,17 @@ Checked 11 October 2026. This is the evidence and pending-work checklist for the
 
 - [ ] Obtain approved individual project photographs and descriptions: window type, fabric/product, hardware, installation solution and outcome. Write case studies from those records, then reconsider Portfolio indexing.
 - [ ] Google Maps core identity checked. The confirmed 08:30–17:30 weekday hours were submitted as a public correction on 11 October; Google review remains pending. Obtain the exact Houzz profile URL and existing Business Profile owner's access route.
-- [ ] Confirm current sample/ordering access and any specific authorised-dealer wording for non-Luxaflex brands before adding stronger relationship claims or brand logos.
+- [ ] Confirm current sample/ordering access and any specific authorised-dealer wording for non-Luxaflex brands before adding stronger relationship claims. The five original manufacturer marks and their sources are recorded in ASSET-SOURCES.md.
 - [ ] Confirm survey/fitting coverage, prices, guarantees and lead times before adding specific promises. Weekday opening hours are confirmed and published; additional served areas are not claimed.
-- [ ] Inspect indexing and search performance when Search Console processing finishes. The previous sitemap submission succeeded with ten pages discovered; the new release adds two indexable service URLs. Local checks do not verify ranking or traffic improvements.
+- [ ] Inspect indexing and search performance when Search Console processing finishes. Google accepted the updated twelve-URL sitemap on 11 October; its last discovery report still showed ten pages. Submission does not verify completed indexing, ranking or traffic improvements.
 
 ## Local validation and design
 
-- Site safety checks pass for all 12 routes, including structured-data hashes, local links, unique metadata and sitemap/indexability consistency.
-- Browser checks found no horizontal overflow, broken images or header overlap at mobile and desktop sizes. Exact 390px mobile emulation was checked on every route.
+- Site safety checks pass for all sixteen HTML pages, including structured-data hashes, local links, unique metadata and sitemap/indexability consistency.
+- Final production browser checks covered every page at 320px, 390px, 1024px and 1440px. Shared outer content widths match, with no horizontal overflow or broken images detected. Desktop and mobile page layouts, lower sections and footers were visually reviewed.
 - Shared Jost headings, Poppins body text, gold/ink/surface tokens, page-title sizing, buttons, navigation and footer are reused. Services remains highlighted on its detail pages.
 - Mobile menu open/close and FAQ expansion were verified. The Google Maps embed loaded successfully and visually located Martin Kaye Interiors.
-- The local preview is available at http://127.0.0.1:8765/services/. Production is served at https://mkiuk.com/ through GitHub Pages; a successful workflow and live checks establish release status.
+- Start the local preview using the command in README.md; the review server was stopped after verification. Production is served at https://mkiuk.com/ through GitHub Pages; a successful workflow and live checks establish release status.
 
 ## Source notes
 
@@ -78,6 +78,8 @@ Contact has a client-side enquiry brief that validates the service and project f
 
 The safety checker covers all sixteen HTML pages, exact schema hashes, explicit indexability and safe SVG content. The protected-main deployment allowlist includes the three new directories and 404. The sitemap now has twelve indexable URLs. Browser checks at 390px and 1024px found no horizontal overflow; the enquiry helper's required fields, encoded body, safe plain-text preview and stale-draft reset were verified. Desktop visual checks cover the new service and brand layouts. No email was sent during testing.
 
-The www HTTPS test failed certificate hostname verification while the apex remained available. GitHub Pages reported certificate state `dns_changed`, described as requesting a new certificate; the queried DNS records match GitHub's documented records. Certificate provisioning should finish before any disruptive remove/re-add of the working custom domain is considered. Mobile PageSpeed API requests returned 429, so no speed score or Core Web Vitals pass is claimed.
+The www certificate issue was repaired on 11 October using GitHub's documented domain renewal retry. The new certificate covers both mkiuk.com and www.mkiuk.com and expires on 9 January 2027. HTTPS enforcement is restored. Both hostnames passed TLS validation; www redirects to the matching apex path with query strings preserved. HTTP requests, including the homepage after its older cached response expired, redirect to HTTPS. Twenty-three live release checks passed again. Sanitized certificate and final layout evidence remain in the ignored .recovery/implementation folder.
+
+Mobile PageSpeed API requests returned 429, so no speed score or Core Web Vitals pass is claimed.
 
 Ignored local operational aids include a blank lead log, project-evidence template and 264-row historical HTML URL inventory. The inventory is for review, not a guessed redirect map. Original project photos, detailed case studies, confirmed survey coverage and lead-source records still require MKI's input. Business Profile ownership and the exact Houzz profile remain external dependencies.
