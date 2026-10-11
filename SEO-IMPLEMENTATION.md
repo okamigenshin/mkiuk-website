@@ -30,7 +30,7 @@ Checked 11 October 2026. This is the evidence and pending-work checklist for the
 ## Remaining content and external work
 
 - [ ] Obtain approved individual project photographs and descriptions: window type, fabric/product, hardware, installation solution and outcome. Write case studies from those records, then reconsider Portfolio indexing.
-- [ ] Google Maps core identity checked; confirm conflicting opening hours and obtain the exact Houzz profile URL. No external business profiles were edited.
+- [ ] Google Maps core identity checked; correct its hours to the confirmed 08:30–17:30 weekdays and obtain the exact Houzz profile URL. No external business profiles were edited.
 - [ ] Confirm current sample/ordering access and any specific authorised-dealer wording for non-Luxaflex brands before adding stronger relationship claims or brand logos.
 - [ ] Confirm any service-area and opening-hours claims directly with MKI before adding them. The current build makes no opening-hours, price, review or geographic coverage claims.
 - [ ] After an authorised release, submit the sitemap and inspect indexing and search performance in Search Console. Local checks do not verify ranking or traffic improvements.
@@ -58,3 +58,12 @@ Brand facts were checked on each manufacturer's official site. Category summarie
 - The exact Google profile was checked through https://www.google.com/maps/search/?api=1&query=Martin+Kaye+Interiors+625+Watford+Way+London+NW7+3JN . No external business profile was changed. Focused searches found no verified Houzz profile; an exact URL is still needed.
 - Search Console automatically verified the https://mkiuk.com/ URL-prefix property using the existing domain-provider verification. No new DNS record or verification file was added. Its indexing/performance reports are processing.
 - The sitemap submission was accepted, but the initial report showed Couldn't fetch. Live HTTP checks return valid application/xml with HTTP 200. Google's live test of /services/ confirms URL is available to Google and Page can be indexed. Final processing status and indexing request results are recorded below when verified.
+
+
+## Confirmed opening hours
+
+Hemanth confirmed on 11 October 2026 that weekday opening hours are 08:30–17:30. These hours are now visible on Contact, Arrange a Visit, FAQ and every footer, and repeated in each business openingHoursSpecification. This matches the Luxaflex listing. External Google profile update status is recorded in the local verification log.
+
+## Search Console follow-up result
+
+On 11 October 2026 Google successfully read sitemap.xml and discovered all 10 indexable pages. The /services/ live test passed and its indexing request was accepted into the priority crawl queue. These are discovery/request confirmations, not proof of completed indexing or ranking. Screenshots and the release verification record are retained in the ignored .recovery folder.
