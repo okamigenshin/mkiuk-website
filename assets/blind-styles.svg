@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">Three common blind styles</title>
+  <desc id="desc">Illustrations of a Roman blind with soft folds, a roller blind with a flat panel, and a Venetian blind with horizontal slats.</desc>
+  <rect width="960" height="360" rx="8" fill="#f2eee7"/>
+  <g fill="#e2e7e3" stroke="#423b31" stroke-width="5"><rect x="62" y="45" width="216" height="226"/><rect x="372" y="45" width="216" height="226"/><rect x="682" y="45" width="216" height="226"/></g>
+  <g fill="#d7c6a4" stroke="#b4a080" stroke-width="2"><path d="M70 53h200v165q-50 14-100 0t-100 0Z"/><path d="M70 115q50 14 100 0t100 0M70 158q50 14 100 0t100 0"/><rect x="380" y="53" width="200" height="165"/></g>
+  <path d="M380 218h200" stroke="#946312" stroke-width="6"/>
+  <g stroke="#b4a080" stroke-width="10"><path d="M690 61h200M690 84h200M690 107h200M690 130h200M690 153h200M690 176h200M690 199h200M690 222h200M690 245h200"/></g>
+  <g fill="#423b31" font-family="Arial,sans-serif" font-size="25" text-anchor="middle"><text x="170" y="322">Roman</text><text x="480" y="322">Roller</text><text x="790" y="322">Venetian</text></g>
+</svg>

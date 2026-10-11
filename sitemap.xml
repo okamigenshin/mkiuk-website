@@ -49,4 +49,18 @@
     <loc>https://mkiuk.com/shutters/</loc>
     <lastmod>2026-10-11</lastmod>
   </url>
+  <url>
+    <loc>https://mkiuk.com/blinds/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <image:image>
+      <image:loc>https://mkiuk.com/assets/showroom.webp</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://mkiuk.com/luxaflex-blinds/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <image:image>
+      <image:loc>https://mkiuk.com/assets/showroom.webp</image:loc>
+    </image:image>
+  </url>
 </urlset>
