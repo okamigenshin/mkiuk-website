@@ -30,7 +30,7 @@ Checked 11 October 2026. This is the evidence and pending-work checklist for the
 ## Remaining content and external work
 
 - [ ] Obtain approved individual project photographs and descriptions: window type, fabric/product, hardware, installation solution and outcome. Write case studies from those records, then reconsider Portfolio indexing.
-- [ ] Confirm the exact Google Business Profile and Houzz profile URLs and review their name, address, phone, hours, categories, service area and site URL. No external profiles were edited.
+- [ ] Google Maps core identity checked; confirm conflicting opening hours and obtain the exact Houzz profile URL. No external business profiles were edited.
 - [ ] Confirm current sample/ordering access and any specific authorised-dealer wording for non-Luxaflex brands before adding stronger relationship claims or brand logos.
 - [ ] Confirm any service-area and opening-hours claims directly with MKI before adding them. The current build makes no opening-hours, price, review or geographic coverage claims.
 - [ ] After an authorised release, submit the sitemap and inspect indexing and search performance in Search Console. Local checks do not verify ranking or traffic improvements.
@@ -46,3 +46,15 @@ Checked 11 October 2026. This is the evidence and pending-work checklist for the
 ## Source notes
 
 Brand facts were checked on each manufacturer's official site. Category summaries above are deliberately limited to what those pages describe. The current live Google Search documentation was checked on 11 October 2026; its guidance can change, so recheck at implementation and before any later SEO claim.
+
+
+## Follow-up checks on 11 October 2026
+
+- Corrected all six new page containers to the same 1280px maximum as About and Contact. Verified matching left alignment and widths on desktop and mobile, with no overflow.
+- Added the Companies House number visibly to every footer and linked the business graph to the official register, Luxaflex dealer record and exact Google Maps profile.
+- Changed the existing curtain hero from a CSS-only background to a normal high-priority image with a factual alt description, preserving its appearance. Added image entries and the actual update date to the sitemap.
+- Recovered MKI's own historical featured-project titles from the 2024 site archive: Gucci London, Hermès Sloane Street and Everyman at Selfridges. Added the titles to Portfolio. Full material/installation case studies and individual approved photographs remain unavailable; Portfolio retains noindex.
+- The public Google Maps profile matches the trading name, 625 Watford Way / NW7 3JN, telephone and website. Google abbreviates Way as Wy and omits Mill Hill; these identify the same address and are not evidence of a location mismatch. Google lists weekday hours 09:00–17:00, while Luxaflex lists 08:30–17:30. Do not choose hours until MKI confirms.
+- The exact Google profile was checked through https://www.google.com/maps/search/?api=1&query=Martin+Kaye+Interiors+625+Watford+Way+London+NW7+3JN . No external business profile was changed. Focused searches found no verified Houzz profile; an exact URL is still needed.
+- Search Console automatically verified the https://mkiuk.com/ URL-prefix property using the existing domain-provider verification. No new DNS record or verification file was added. Its indexing/performance reports are processing.
+- The sitemap submission was accepted, but the initial report showed Couldn't fetch. Live HTTP checks return valid application/xml with HTTP 200. Google's live test of /services/ confirms URL is available to Google and Page can be indexed. Final processing status and indexing request results are recorded below when verified.
