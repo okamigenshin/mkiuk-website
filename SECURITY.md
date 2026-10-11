@@ -5,10 +5,10 @@ This is a public static website. It has no login, backend, database or online pa
 ## Controls
 
 - Changes to `main` go through a pull request and the required Site safety check. Branch deletion and force pushes are blocked, including for the owner. No routine bypass is configured.
-- Site safety checks the six pages, local resources, browser restrictions and publishing domain. It also scans Git history with Gitleaks; reports redact secret values. Private keys, environment files, databases and recovery material must stay outside Git.
+- Site safety checks the twelve public pages, local resources, browser restrictions, SEO metadata, sitemap and publishing domain. It also scans Git history with Gitleaks; reports redact secret values. Private keys, environment files, databases and recovery material must stay outside Git.
 - Workflow tokens default to read-only and cannot approve pull requests. Outside contributors need maintainer approval before workflows run. External Actions are restricted to GitHub-owned Actions and must use full commit SHAs. Dependabot checks Action versions monthly.
-- Pull requests cannot publish. Publishing runs only from `main`, depends on successful safety checks, and uses the `github-pages` environment restricted to `main`. Only public HTML, CSS, JavaScript and assets enter the deployment artifact.
-- Every page has a Content Security Policy that allows local scripts and the existing Google Fonts resources. Inline script execution, eval, plugins, base URL changes and form submissions are not permitted. Referrer information is withheld.
+- Pull requests cannot publish. Publishing runs only from `main`, depends on successful safety checks, and uses the `github-pages` environment restricted to `main`. The deployment artifact contains only the allowlisted public pages, assets, styles, scripts, sitemap and robots policy.
+- Every page has a Content Security Policy that allows local scripts and the existing Google Fonts resources. The only inline script exception is inert JSON-LD: valid schema.org JSON objects with an `@graph`, each authorized by its exact SHA-256 hash in that page's `script-src`. Executable inline scripts, remote scripts, eval, plugins, base URL changes and form submissions are not permitted. The contact page alone may frame a Google Maps embed from `https://www.google.com/maps` with an `output=embed` query; other frames are denied. Referrer information is withheld.
 - HTTPS is enforced. The custom domain must remain verified in the owner's GitHub Pages account; retain its DNS verification TXT record.
 
 ## Operations

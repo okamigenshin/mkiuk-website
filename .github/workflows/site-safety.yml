@@ -40,8 +40,8 @@ jobs:
         shell: bash
         run: |
           mkdir "$RUNNER_TEMP/site"
-          cp index.html styles.css site.js CNAME .nojekyll "$RUNNER_TEMP/site/"
-          cp -R assets about-us portfolio contact blog book-online "$RUNNER_TEMP/site/"
+          cp index.html styles.css site.js CNAME .nojekyll robots.txt sitemap.xml "$RUNNER_TEMP/site/"
+          cp -R assets about-us portfolio contact blog book-online services bespoke-curtains shutters motorised-blinds faq brands-and-partners "$RUNNER_TEMP/site/"
       - name: Upload website artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4

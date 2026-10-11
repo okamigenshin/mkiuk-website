@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mkiuk.com/sitemap.xml
