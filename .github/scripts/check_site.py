@@ -15,9 +15,11 @@ DOMAIN = "https://mkiuk.com"
 ROUTES = (
     "", "about-us", "portfolio", "contact", "blog", "book-online",
     "services", "bespoke-curtains", "shutters", "motorised-blinds", "faq",
-    "brands-and-partners",
+    "brands-and-partners", "blinds", "luxaflex-blinds", "privacy", "404.html",
 )
-PAGES = [ROOT / route / "index.html" if route else ROOT / "index.html" for route in ROUTES]
+PAGES = [ROOT / route if route.endswith('.html') else
+         ROOT / route / "index.html" if route else ROOT / "index.html" for route in ROUTES]
+NON_INDEXABLE = {"portfolio", "blog", "privacy", "404.html"}
 ERRORS = []
 
 
@@ -49,6 +51,10 @@ class Page(HTMLParser):
             error(self.path, "inline event handler")
         if tag == "base":
             error(self.path, "base element is forbidden")
+        if tag == "form" and (self.path.parent.name != "contact"
+                              or attrs.get("id") != "enquiry-brief"
+                              or "action" in attrs or "method" in attrs):
+            error(self.path, "only the local contact draft helper is allowed; no HTTP submission")
         if tag == "h1":
             self.h1_count += 1
         if tag == "img":
@@ -200,9 +206,11 @@ for path, route in zip(PAGES, ROUTES):
         descriptions[description] = route or "/"
     if page.h1_count != 1:
         error(path, f"expected exactly one h1, found {page.h1_count}")
-    expected_url = DOMAIN + (f"/{route}/" if route else "/")
+    expected_url = DOMAIN + (f"/{route}" if route.endswith('.html') else f"/{route}/" if route else "/")
     if page.canonical != expected_url:
         error(path, f"canonical must be {expected_url}")
+    if ("noindex" in page.robots) != (route in NON_INDEXABLE):
+        error(path, "indexability does not match the publishing allowlist")
     if "noindex" not in page.robots:
         indexable.add(expected_url)
     directives = csp_directives(page)
@@ -222,6 +230,30 @@ for path, route in zip(PAGES, ROUTES):
 
 if (ROOT / "CNAME").read_text(encoding="utf-8").strip() != "mkiuk.com":
     ERRORS.append("Unexpected publishing domain")
+
+for svg_path in (ROOT / "assets").rglob("*.svg"):
+    svg_source = svg_path.read_text(encoding="utf-8")
+    if "<!DOCTYPE" in svg_source.upper() or "<!ENTITY" in svg_source.upper():
+        error(svg_path, "SVG document type/entities are forbidden")
+        continue
+    try:
+        svg_root = ET.fromstring(svg_source)
+    except ET.ParseError:
+        error(svg_path, "invalid SVG XML")
+        continue
+    for element in svg_root.iter():
+        tag = element.tag.rsplit("}", 1)[-1].lower()
+        if tag in {"script", "foreignobject", "iframe", "image"}:
+            error(svg_path, f"active or embedded SVG content: {tag}")
+        for name, value in element.attrib.items():
+            attribute = name.rsplit("}", 1)[-1].lower()
+            if attribute.startswith("on") or (attribute in {"href", "src"} and not value.startswith("#")):
+                error(svg_path, "SVG events and external references are forbidden")
+    if "@import" in svg_source.lower():
+        error(svg_path, "SVG stylesheet imports are forbidden")
+    for reference in re.findall(r"url\(([^)]+)\)", svg_source, re.I):
+        if not reference.strip(" \t\r\n\"'").startswith("#"):
+            error(svg_path, "SVG CSS must not load external resources")
 
 sitemap_path = ROOT / "sitemap.xml"
 try:

@@ -30,10 +30,10 @@ Checked 11 October 2026. This is the evidence and pending-work checklist for the
 ## Remaining content and external work
 
 - [ ] Obtain approved individual project photographs and descriptions: window type, fabric/product, hardware, installation solution and outcome. Write case studies from those records, then reconsider Portfolio indexing.
-- [ ] Google Maps core identity checked; correct its hours to the confirmed 08:30–17:30 weekdays and obtain the exact Houzz profile URL. No external business profiles were edited.
+- [ ] Google Maps core identity checked. The confirmed 08:30–17:30 weekday hours were submitted as a public correction on 11 October; Google review remains pending. Obtain the exact Houzz profile URL and existing Business Profile owner's access route.
 - [ ] Confirm current sample/ordering access and any specific authorised-dealer wording for non-Luxaflex brands before adding stronger relationship claims or brand logos.
-- [ ] Confirm any service-area and opening-hours claims directly with MKI before adding them. The current build makes no opening-hours, price, review or geographic coverage claims.
-- [ ] After an authorised release, submit the sitemap and inspect indexing and search performance in Search Console. Local checks do not verify ranking or traffic improvements.
+- [ ] Confirm survey/fitting coverage, prices, guarantees and lead times before adding specific promises. Weekday opening hours are confirmed and published; additional served areas are not claimed.
+- [ ] Inspect indexing and search performance when Search Console processing finishes. The previous sitemap submission succeeded with ten pages discovered; the new release adds two indexable service URLs. Local checks do not verify ranking or traffic improvements.
 
 ## Local validation and design
 
@@ -54,8 +54,8 @@ Brand facts were checked on each manufacturer's official site. Category summarie
 - Added the Companies House number visibly to every footer and linked the business graph to the official register, Luxaflex dealer record and exact Google Maps profile.
 - Changed the existing curtain hero from a CSS-only background to a normal high-priority image with a factual alt description, preserving its appearance. Added image entries and the actual update date to the sitemap.
 - Recovered MKI's own historical featured-project titles from the 2024 site archive: Gucci London, Hermès Sloane Street and Everyman at Selfridges. Added the titles to Portfolio. Full material/installation case studies and individual approved photographs remain unavailable; Portfolio retains noindex.
-- The public Google Maps profile matches the trading name, 625 Watford Way / NW7 3JN, telephone and website. Google abbreviates Way as Wy and omits Mill Hill; these identify the same address and are not evidence of a location mismatch. Google lists weekday hours 09:00–17:00, while Luxaflex lists 08:30–17:30. Do not choose hours until MKI confirms.
-- The exact Google profile was checked through https://www.google.com/maps/search/?api=1&query=Martin+Kaye+Interiors+625+Watford+Way+London+NW7+3JN . No external business profile was changed. Focused searches found no verified Houzz profile; an exact URL is still needed.
+- The public Google Maps profile matches the trading name, 625 Watford Way / NW7 3JN, telephone and website. Google abbreviates Way as Wy and omits Mill Hill; these identify the same address and are not evidence of a location mismatch. Google listed weekday hours 09:00–17:00; Hemanth subsequently confirmed 08:30–17:30 and a correction was submitted for review.
+- The exact Google profile was checked through https://www.google.com/maps/search/?api=1&query=Martin+Kaye+Interiors+625+Watford+Way+London+NW7+3JN . The hours correction was submitted through Maps, but no managed Business Profile fields were edited. Focused searches found no verified Houzz profile; an exact URL is still needed.
 - Search Console automatically verified the https://mkiuk.com/ URL-prefix property using the existing domain-provider verification. No new DNS record or verification file was added. Its indexing/performance reports are processing.
 - The sitemap submission was accepted, but the initial report showed Couldn't fetch. Live HTTP checks return valid application/xml with HTTP 200. Google's live test of /services/ confirms URL is available to Google and Page can be indexed. Final processing status and indexing request results are recorded below when verified.
 
@@ -67,3 +67,17 @@ Hemanth confirmed on 11 October 2026 that weekday opening hours are 08:30–17:3
 ## Search Console follow-up result
 
 On 11 October 2026 Google successfully read sitemap.xml and discovered all 10 indexable pages. The /services/ live test passed and its indexing request was accepted into the priority crawl queue. These are discovery/request confirmations, not proof of completed indexing or ranking. Screenshots and the release verification record are retained in the ignored .recovery folder.
+
+## Homeowner strategy implementation
+
+Hemanth prioritised local homeowners around Mill Hill before trade clients. The implementation adds dedicated `/blinds/` and `/luxaflex-blinds/` pages, with useful styles, light/privacy guidance, fitting information and FAQs. The Luxaflex product descriptions are based on its official dealer and product pages; availability and exact options remain enquiry-specific.
+
+The homepage now gives the four core homeowner services clear visual links. Service introductions pair concise copy with the recovered showroom photograph, curtain style inspiration or labelled explanatory illustrations. All public page containers share the same maximum width. The original MKI logo remains in the header and footer. Five original manufacturer marks were retrieved from official sites; the brands page preserves the distinction between a verified Luxaflex dealership and brands to discuss. See ASSET-SOURCES.md.
+
+Contact has a client-side enquiry brief that validates the service and project fields, prepares an encoded email draft and previews it as plain text. It neither uploads nor sends data and has no persistent storage or analytics. Visitors choose whether to open their email app and send. Phone/email paths remain usable without JavaScript. A factual privacy notice and a root-path branded 404 are included; both are noindex and omitted from the sitemap.
+
+The safety checker covers all sixteen HTML pages, exact schema hashes, explicit indexability and safe SVG content. The protected-main deployment allowlist includes the three new directories and 404. The sitemap now has twelve indexable URLs. Browser checks at 390px and 1024px found no horizontal overflow; the enquiry helper's required fields, encoded body, safe plain-text preview and stale-draft reset were verified. Desktop visual checks cover the new service and brand layouts. No email was sent during testing.
+
+The www HTTPS test failed certificate hostname verification while the apex remained available. GitHub Pages reported certificate state `dns_changed`, described as requesting a new certificate; the queried DNS records match GitHub's documented records. Certificate provisioning should finish before any disruptive remove/re-add of the working custom domain is considered. Mobile PageSpeed API requests returned 429, so no speed score or Core Web Vitals pass is claimed.
+
+Ignored local operational aids include a blank lead log, project-evidence template and 264-row historical HTML URL inventory. The inventory is for review, not a guessed redirect map. Original project photos, detailed case studies, confirmed survey coverage and lead-source records still require MKI's input. Business Profile ownership and the exact Houzz profile remain external dependencies.

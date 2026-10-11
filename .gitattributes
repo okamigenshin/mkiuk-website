@@ -1,0 +1,2 @@
+# Manufacturer logo assets retain the exact original bytes.
+assets/brands/* -text -diff

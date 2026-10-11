@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" role="img" aria-labelledby="title desc">
+  <title id="title">Planning a motorised window blind</title>
+  <desc id="desc">An illustrated roller blind, a remote control and a cable route, showing elements to discuss when planning motorisation.</desc>
+  <rect width="720" height="620" fill="#f2eee7"/>
+  <path d="M0 525h720M62 0v525" stroke="#ddd5c8" stroke-width="2"/>
+  <rect x="94" y="80" width="352" height="416" fill="#e2e7e3" stroke="#423b31" stroke-width="8"/>
+  <path d="M270 80v416M94 290h352" stroke="#423b31" stroke-width="5"/>
+  <rect x="102" y="87" width="336" height="204" fill="#d7c6a4"/>
+  <path d="M102 291h336" stroke="#946312" stroke-width="8"/>
+  <rect x="88" y="68" width="364" height="24" rx="7" fill="#423b31"/>
+  <path d="M453 80h41v300" fill="none" stroke="#946312" stroke-width="3" stroke-dasharray="7 8"/>
+  <rect x="530" y="280" width="85" height="195" rx="20" fill="#fffaf0" stroke="#423b31" stroke-width="5"/>
+  <circle cx="573" cy="330" r="15" fill="#946312"/>
+  <path d="m566 334 7-9 7 9M566 416l7 9 7-9" fill="none" stroke="#fffaf0" stroke-width="3"/>
+  <circle cx="573" cy="420" r="15" fill="#423b31"/>
+  <path d="m566 416 7 9 7-9" fill="none" stroke="#fffaf0" stroke-width="3"/>
+  <rect x="562" y="366" width="22" height="19" rx="3" fill="#423b31"/>
+  <path d="M572 247q-54-45-101-55M572 221q-55-45-101-55" fill="none" stroke="#b9ac92" stroke-width="3"/>
+  <text x="360" y="570" text-anchor="middle" fill="#423b31" font-family="Arial,sans-serif" font-size="24">Plan the blind, power and controls together</text>
+</svg>
